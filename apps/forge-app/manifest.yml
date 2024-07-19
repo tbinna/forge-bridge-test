@@ -1,0 +1,21 @@
+modules:
+  jira:globalPage:
+    - key: global-page
+      title: Bridge test
+      resource: custom-ui
+      resolver:
+        function: resolver
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: custom-ui
+    path: custom-ui
+permissions:
+  content:
+    styles:
+      - unsafe-inline
+app:
+  id: ari:cloud:ecosystem::app/66cf1508-ec53-4430-9fef-0dd063a82c36
+  runtime:
+    name: nodejs18.x
